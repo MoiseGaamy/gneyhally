@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "gneyhally",
+    "slug": "gneyhally",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.gaamy.gneyhally"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c2776121-565d-424c-8e51-36ddcabb1416"
+      }
+    }
+  }
+}
