@@ -18,30 +18,34 @@ const cardData = [
     icon: "music", // You can change the icon name based on your needs
     image: require("../../../assets/images/sixthCard.png"), // Replace with your image path
     backgroundColor: "#CDB3D4",
+    contentlanguage: "Malinke",
   },
   {
     id: "2",
     title: "Card 2",
     description: "Le rôle du préservatif?",
-    icon: "video-camera", // You can change the icon name based on your needs
+    icon: "music", // You can change the icon name based on your needs
     image: require("../../../assets/images/seventhCard.png"), // Replace with your image path
     backgroundColor: "yellow",
+    contentlanguage: "Malinke",
   },
   {
     id: "3",
     title: "Card 3",
     description: "J’ai peur de me faire dépister ?",
-    icon: "image", // You can change the icon name based on your needs
+    icon: "music", // You can change the icon name based on your needs
     image: require("../../../assets/images/lastCard.png"), // Replace with your image path
     backgroundColor: "#93A19C",
+    contentlanguage: "Malinke",
   },
   {
     id: "4",
     title: "Card 4",
     description: "D’où vient le sperme ?.",
-    icon: "file", // You can change the icon name based on your needs
+    icon: "music", // You can change the icon name based on your needs
     image: require("../../../assets/images/lastCard.png"), // Replace with your image path
     backgroundColor: "#93A19C",
+    contentlanguage: "Malinke",
   },
 ];
 
@@ -53,6 +57,11 @@ function CardItem({ item, navigation }) {
       onPress={onPress}
       style={[styles.cardContainer, { backgroundColor: item.backgroundColor }]}
     >
+      <View style={styles.iconOverlay2}>
+        {item.contentlanguage === "Malinke" && (
+          <Text style={styles.secondShadowText}>Malinke</Text>
+        )}
+      </View>
       <Image source={item.image} style={styles.cardImage} />
       <View style={styles.iconOverlay}>
         {item.icon === "music" && (
@@ -120,6 +129,22 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     padding: 4,
     flexDirection: "row",
+  },
+  secondShadowText: {
+    fontSize: 8,
+    color: "white",
+  },
+  iconOverlay2: {
+    position: "absolute",
+    top: 9,
+    left: 5,
+    width: 40,
+    backgroundColor: "rgba(0, 0, 0, 0.3)",
+    borderRadius: 4,
+    padding: 2,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
   },
   cardTitle: {
     fontSize: 16,

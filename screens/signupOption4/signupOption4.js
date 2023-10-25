@@ -16,10 +16,10 @@ import MyModal from "../modal/MyModal";
 
 const SignupOption4 = ({ navigation }) => {
   const onPress = () => console.log("Press");
-  const [email, onChangeEmail] = React.useState("Adresse email");
-  const [mdp, onChangeMdp] = React.useState("Mot de passe");
-  const [rmdp, onChangeRmdp] = React.useState("Répété le mot de passe");
-  const [number, onChangeNumber] = React.useState("");
+  const [email, onChangeEmail] = useState("Adresse email");
+  const [mdp, onChangeMdp] = useState("Mot de passe");
+  const [rmdp, onChangeRmdp] = useState("Répété le mot de passe");
+  const [number, onChangeNumber] = useState("");
 
   const windowWith = useWindowDimensions().height;
   const padding = windowWith;

@@ -126,7 +126,7 @@ const AiHomeFirst = ({ navigation }) => {
       </View>
       <View
         style={{
-          flex: 0.5,
+          flex: 0.6,
           width: "80%", // Width as a percentage of its parent container
 
           borderTopLeftRadius: 0, // Top-left corner radius in pixels
@@ -179,7 +179,14 @@ const AiHomeFirst = ({ navigation }) => {
         </Text>
       </View>
       <View style={{ flex: 1 }}>
-        <Text style={{ color: "#93A19C", left: 40, marginBottom: 20 }}>
+        <Text
+          style={{
+            color: "#93A19C",
+            left: 40,
+            marginBottom: 20,
+            fontWeight: "500",
+          }}
+        >
           Sujets suggérés
         </Text>
         <View
@@ -234,17 +241,18 @@ const styles = StyleSheet.create({
     // alignItems: "center",
   },
   category: {
-    height: "25%",
-    width: "32%",
+    height: "35%",
+    width: "40%",
     backgroundColor: "#d7e0dd", // Background color of the rounded view
     borderRadius: 30,
     alignItems: "center",
     justifyContent: "center",
     margin: 2,
+    padding: 2,
   },
   text: {
     fontWeight: "500",
-    fontSize: 12,
+    fontSize: 11,
     lineHeight: 14.22,
     letterSpacing: 0.0125,
     color: "#93A19C",

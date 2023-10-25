@@ -15,33 +15,37 @@ const cardData = [
     id: "1",
     title: "Card 1",
     description: "Pourquoi les filles tombent enceinte ?",
-    icon: "music", // You can change the icon name based on your needs
+    icon: "youtube", // You can change the icon name based on your needs
     image: require("../../../assets/images/firstCard.png"), // Replace with your image path
     backgroundColor: "#E7B7C8",
+    contentlanguage: "Malinke",
   },
   {
     id: "2",
     title: "Card 2",
     description: "D’où vient le sperme ?",
-    icon: "video-camera", // You can change the icon name based on your needs
+    icon: "youtube", // You can change the icon name based on your needs
     image: require("../../../assets/images/secondCard.png"), // Replace with your image path
     backgroundColor: "#47CACC",
+    contentlanguage: "Malinke",
   },
   {
     id: "3",
     title: "Card 3",
     description: "Pourquoi les filles tombent enceinte ?",
-    icon: "image", // You can change the icon name based on your needs
+    icon: "youtube", // You can change the icon name based on your needs
     image: require("../../../assets/images/firstCard.png"), // Replace with your image path
     backgroundColor: "#D1EBE1",
+    contentlanguage: "Malinke",
   },
   {
     id: "4",
     title: "Card 4",
     description: "D’où vient le sperme ?.",
-    icon: "file", // You can change the icon name based on your needs
+    icon: "youtube", // You can change the icon name based on your needs
     image: require("../../../assets/images/secondCard.png"), // Replace with your image path
     backgroundColor: "#FFBE88",
+    contentlanguage: "Malinke",
   },
 ];
 
@@ -51,23 +55,27 @@ const cardData = [
 function CardItem({ item, navigation }) {
   const onPress = () => navigation.navigate("ActionAuthentication");
   // const onPress = ()=>(console.log('this is it.'));
+
   return (
     <TouchableOpacity
       onPress={onPress}
       style={[styles.cardContainer, { backgroundColor: item.backgroundColor }]}
     >
+      <View style={styles.iconOverlay2}>
+        {item.contentlanguage === "Malinke" && (
+          <Text style={styles.secondShadowText}>Malinke</Text>
+        )}
+      </View>
       <Image source={item.image} style={styles.cardImage} />
       <View style={styles.iconOverlay}>
-        {item.icon === "music" && (
-          <FontAwesome name="music" size={15} color="white" />
+        {item.icon === "youtube" && (
+          <View style={{ flexDirection: "row" }}>
+            <Entypo name="youtube" size={15} color="white" />
+            <Text style={{ color: "white", fontSize: 9, marginLeft: 4 }}>
+              Video
+            </Text>
+          </View>
         )}
-        {item.icon === "video-camera" && (
-          <FontAwesome name="video-camera" size={15} color="white" />
-        )}
-        {item.icon === "image" && (
-          <MaterialIcons name="image" size={15} color="white" />
-        )}
-        {item.icon === "file" && <Entypo name="file" size={15} color="white" />}
       </View>
       <View
         style={{
@@ -98,9 +106,10 @@ export default function Parade1({ navigation }) {
 
 const styles = StyleSheet.create({
   cardContainer: {
-    backgroundColor: "white",
+    // backgroundColor: "green",
     width: 150,
     margin: 10,
+    justifyContent: "space-evenly",
     // padding: 10,
     borderRadius: 10,
     shadowColor: "black",
@@ -114,15 +123,33 @@ const styles = StyleSheet.create({
     height: 100,
     borderRadius: 5,
     marginBottom: 5,
+    justifyContent: "center",
+    alignItems: "center",
   },
   iconOverlay: {
     position: "absolute",
-    top: 5,
+    top: 8,
     right: 5,
     backgroundColor: "rgba(0, 0, 0, 0.3)",
-    borderRadius: 12,
-    padding: 4,
+    borderRadius: 4,
+    padding: 2,
     flexDirection: "row",
+  },
+  secondShadowText: {
+    fontSize: 8,
+    color: "white",
+  },
+  iconOverlay2: {
+    position: "absolute",
+    top: 9,
+    left: 5,
+    width: 40,
+    backgroundColor: "rgba(0, 0, 0, 0.3)",
+    borderRadius: 4,
+    padding: 2,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
   },
   cardTitle: {
     fontSize: 16,

@@ -13,8 +13,16 @@ import Title from "../../../components/Title";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { COLORS } from "../../../utils/Constantes";
 import { DataExpertHome } from "../../../Data";
+import { useFonts } from "expo-font";
 
 const SayIn = ({ navigation }) => {
+  const [loaded] = useFonts({
+    lexendGiga: require("../../../assets/fonts/lexendGiga/LexendGiga-SemiBold.ttf"),
+    rubik: require("../../../assets/fonts/rubik/Rubik-Regular.ttf"),
+    rubik5: require("../../../assets/fonts/rubik/Rubik-Light.ttf"),
+    rubik7: require("../../../assets/fonts/rubik/Rubik-Bold.ttf"),
+  });
+
   const DataExpertHome = [
     {
       id: 1,
@@ -52,6 +60,10 @@ const SayIn = ({ navigation }) => {
 
   const onPress = () => navigation.navigate("expertProfile");
 
+  if (!loaded) {
+    return null;
+  }
+
   return (
     <View style={{ marginTop: 8, paddingHorizontal: 10 }}>
       <View style={{ flexDirection: "row" }}>
@@ -65,7 +77,7 @@ const SayIn = ({ navigation }) => {
             textAlign: "center",
           }}
         >
-          <Title text="Parlons en" />
+          {/* <Title text="Parlons en" /> */}
         </View>
       </View>
       <View
@@ -82,7 +94,11 @@ const SayIn = ({ navigation }) => {
         />
         <TextInput
           placeholder="Rechercher un expert"
-          style={{ paddingHorizontal: 70, alignContent: "center" }}
+          style={{
+            paddingHorizontal: 70,
+            alignContent: "center",
+            fontFamily: "rubik5",
+          }}
         />
       </View>
       <View
@@ -107,7 +123,12 @@ const SayIn = ({ navigation }) => {
           }}
         >
           <Text
-            style={{ color: COLORS.white, fontSize: 16, fontWeight: "bold" }}
+            style={{
+              color: COLORS.white,
+              fontSize: 16,
+              fontWeight: "bold",
+              fontFamily: "rubik7",
+            }}
           >
             Des réponses à toutes tes questions sur la santé sexuelle.{" "}
           </Text>
@@ -220,6 +241,7 @@ const SayIn = ({ navigation }) => {
                   style={{
                     marginTop: 5,
                     color: COLORS.gray,
+                    fontFamily: "rubik",
                   }}
                 >
                   {item.role}
@@ -227,6 +249,9 @@ const SayIn = ({ navigation }) => {
                 <Text
                   style={{
                     marginTop: 5,
+                    color: "gray",
+                    fontSize: 10,
+                    fontFamily: "rubik7",
                   }}
                 >
                   {item.localWorkName}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -16,10 +16,10 @@ import { useFonts } from "expo-font";
 
 const SignupOption2 = ({ navigation }) => {
   const onPress = () => navigation.navigate("SignupOption3");
-  const [email, onChangeEmail] = React.useState("");
-  const [mdp, onChangeMdp] = React.useState("");
-  const [rmdp, onChangeRmdp] = React.useState("");
-  const [number, onChangeNumber] = React.useState("");
+  const [email, onChangeEmail] = useState("");
+  const [mdp, onChangeMdp] = useState("");
+  const [rmdp, onChangeRmdp] = useState("");
+  const [number, onChangeNumber] = useState("");
 
   const windowWith = useWindowDimensions().height;
   const padding = windowWith;

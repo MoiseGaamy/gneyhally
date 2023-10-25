@@ -10,12 +10,19 @@ import {
   Image,
   SafeAreaView,
 } from "react-native";
-import { FontAwesome, Ionicons, Feather } from "@expo/vector-icons";
+import {
+  FontAwesome,
+  Ionicons,
+  Feather,
+  SimpleLineIcons,
+} from "@expo/vector-icons";
 import Parade1 from "./parade/Parade1";
 import Parade2 from "./parade/Parade2";
 import Parade3 from "./parade/Parade3";
 import AiHomeFirst from "../aiHomeFirst/AiHomeFirst";
 import HomeExpertsAuthentification from "../homeExpertsAuthentification/HomeExpertsAuthentification";
+import { useFonts } from "expo-font";
+import CustomHeaderLeft from "../customicon/CustomHeaderLeft";
 
 // Screen components for your Tab Navigator
 function Screen1({ navigation }) {
@@ -33,6 +40,7 @@ function Screen1({ navigation }) {
             fontSize: 16,
             fontWeight: "700",
             lineHeight: 19,
+            fontFamily: "rubik5",
             letterSpacing: 0.005,
             marginLeft: 32,
             color: "#2D665F",
@@ -41,7 +49,7 @@ function Screen1({ navigation }) {
           Découvre les sujets qui t’intéresse
         </Text>
       </View>
-      <View style={{ flex: 0.9 }}>
+      <View style={{ flex: 0.9, marginVertical: 5 }}>
         <View style={{ flex: 1 }}>
           <View style={{ flex: 0.1 }}>
             <Text
@@ -57,7 +65,7 @@ function Screen1({ navigation }) {
               Contenus suggérés
             </Text>
           </View>
-          <View style={{ flex: 0.9 }}>
+          <View style={{ flex: 0.9, marginVertical: 5 }}>
             <Parade1 navigation={navigation} />
           </View>
         </View>
@@ -69,14 +77,14 @@ function Screen1({ navigation }) {
                 fontSize: 14,
                 lineHeight: 16.59,
                 letterSpacing: 0.25,
-                marginLeft: 32,
+                marginLeft: 28,
                 color: "#93A19C",
               }}
             >
               La santé sexuelle
             </Text>
           </View>
-          <View style={{ flex: 0.9 }}>
+          <View style={{ flex: 0.9, marginVertical: 5 }}>
             <Parade2 navigation={navigation} />
           </View>
         </View>
@@ -88,14 +96,14 @@ function Screen1({ navigation }) {
                 fontSize: 14,
                 lineHeight: 16.59,
                 letterSpacing: 0.25,
-                marginLeft: 32,
+                marginLeft: 28,
                 color: "#93A19C",
               }}
             >
               Les MST
             </Text>
           </View>
-          <View style={{ flex: 0.9 }}>
+          <View style={{ flex: 0.9, marginVertical: 5 }}>
             <Parade3 navigation={navigation} />
           </View>
         </View>
@@ -562,13 +570,22 @@ function TabNavigator({ navigation }) {
 
 // Create the top-level navigation structure
 function App() {
+  const [loaded] = useFonts({
+    lexendGiga: require("../../assets/fonts/lexendGiga/LexendGiga-SemiBold.ttf"),
+    rubik: require("../../assets/fonts/rubik/Rubik-Regular.ttf"),
+    rubik5: require("../../assets/fonts/rubik/Rubik-Light.ttf"),
+    rubik7: require("../../assets/fonts/rubik/Rubik-Bold.ttf"),
+  });
+  if (!loaded) {
+    return null;
+  }
   return (
     // <NavigationContainer>
     <Drawer.Navigator
       screenOptions={{
         drawerStyle: {
-          // backgroundColor: "#c6cbef",
-          width: "85%",
+          // backgroundColor: "#93A19C",
+          width: "100%",
         },
       }}
       drawerContent={(props) => <CustomDrawerContent {...props} />}
@@ -580,7 +597,7 @@ function App() {
           title: "",
           headerRight: () => (
             <TouchableOpacity
-              style={{ marginRight: 16 }}
+              style={{ marginRight: 17 }}
               onPress={() => {
                 // Handle the search icon press here
                 // You can navigate to a search screen or open a search modal, for example.

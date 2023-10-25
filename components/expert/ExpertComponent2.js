@@ -239,8 +239,8 @@ const ExpertComponent2 = ({ texte, moreText, navigation }) => {
                 { color },
               ]}
             >
-              <Text style={[{ fontSize: 20 }, { color }]}>{item.num}</Text>
-              <Text style={[{ fontSize: 15 }, { color }]}>{item.day}</Text>
+              <Text style={[{ fontSize: 18 }, { color }]}>{item.num}</Text>
+              <Text style={[{ fontSize: 14 }, { color }]}>{item.day}</Text>
             </View>
           );
         }}

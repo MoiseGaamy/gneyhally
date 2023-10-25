@@ -102,8 +102,8 @@ const styles = StyleSheet.create({
     color: "green",
   },
   bottomImageStyle: {
-    width: 219,
-    height: 220,
+    width: "100%",
+    height: "60%",
     resizeMode: "contain",
     color: "green",
   },
@@ -115,8 +115,8 @@ const styles = StyleSheet.create({
   bottomImageRightImage: {
     // fill: "#5E9F87",
     opacity: 0.65,
-    width: 205,
-    height: 205,
+    width: "100%",
+    height: "50%",
     resizeMode: "contain",
   },
 });

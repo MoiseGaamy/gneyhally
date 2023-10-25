@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     borderRadius: 15, // Adjust the value as needed
     paddingVertical: 10, // Adjust the value as needed
     paddingHorizontal: 20, // Adjust the value as needed
-    width: 377,
+    width: 360,
     height: 60,
     justifyContent: "center",
     alignItems: "center",

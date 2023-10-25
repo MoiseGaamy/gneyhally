@@ -33,7 +33,7 @@ const ParadeElement = ({
           width: "109%",
           backgroundColor: "rgba(255, 255, 255, 0.6)",
           position: "absolute",
-          top: 92,
+          top: 82,
         }}
       >
         <Text style={styles.label}>{label}</Text>
@@ -107,14 +107,14 @@ const styles = StyleSheet.create({
   iconContainer: {
     position: "absolute",
     top: 0,
-    left: 5,
+    left: 10,
     right: 0,
     alignItems: "flex-end",
     margin: 30,
   },
   image: {
-    width: 180,
-    height: 130,
+    width: 170,
+    height: 110,
     marginBottom: 10,
   },
   labelContainer: {
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
   label: {
     fontWeight: "400",
     fontSize: 16,
-    lineHeight: 18.96,
+    lineHeight: 17.96,
     letterSpacing: 0.005, // To represent 0.5% letter spacing
     textAlign: "left",
     color: "#2D665F",

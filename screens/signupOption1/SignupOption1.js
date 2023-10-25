@@ -36,8 +36,8 @@ const SignupOption1 = ({ navigation }) => {
         <TouchableOpacity style={styles.button} onPress={onPress}>
           <View
             style={{
-              flex: 0.5,
-              justifyContent: "flex-end",
+              flex: 0.2,
+              justifyContent: "center",
               alignItems: "center",
             }}
           >
@@ -48,8 +48,8 @@ const SignupOption1 = ({ navigation }) => {
           </View>
           <View
             style={{
-              flex: 0.5,
-              justifyContent: "flex-start",
+              flex: 0.4,
+              justifyContent: "center",
               alignItems: "flex-start",
             }}
           >
@@ -59,8 +59,8 @@ const SignupOption1 = ({ navigation }) => {
         <TouchableOpacity style={styles.button} onPress={onPress}>
           <View
             style={{
-              flex: 0.5,
-              justifyContent: "flex-end",
+              flex: 0.2,
+              justifyContent: "center",
               alignItems: "center",
             }}
           >
@@ -71,8 +71,8 @@ const SignupOption1 = ({ navigation }) => {
           </View>
           <View
             style={{
-              flex: 0.5,
-              justifyContent: "flex-start",
+              flex: 0.4,
+              justifyContent: "center",
               alignItems: "flex-start",
             }}
           >
@@ -82,8 +82,8 @@ const SignupOption1 = ({ navigation }) => {
         <TouchableOpacity style={styles.button} onPress={onPress}>
           <View
             style={{
-              flex: 0.5,
-              justifyContent: "flex-end",
+              flex: 0.1,
+              justifyContent: "center",
               alignItems: "center",
             }}
           >
@@ -94,8 +94,8 @@ const SignupOption1 = ({ navigation }) => {
           </View>
           <View
             style={{
-              flex: 0.5,
-              justifyContent: "flex-start",
+              flex: 0.4,
+              justifyContent: "center",
               alignItems: "flex-start",
             }}
           >

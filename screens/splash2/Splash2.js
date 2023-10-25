@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     color: "#FFF",
     textAlign: "center",
     fontFamily: "lexendGiga",
-    fontSize: 28,
+    fontSize: 24,
     fontWeight: "400",
   },
   text2: {

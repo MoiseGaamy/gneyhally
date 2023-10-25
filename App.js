@@ -195,7 +195,9 @@ export default function App() {
           name="expertHomepage"
           component={SayIn}
           options={{
-            title: "",
+            title: "Parlons-en",
+            headerTintColor: "gray",
+            headerTitleAlign: "center",
             headerShown: true,
           }}
         />

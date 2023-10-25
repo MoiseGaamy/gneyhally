@@ -249,8 +249,8 @@ const ExpertProfileReducer2 = ({ navigation }) => {
                 { color },
               ]}
             >
-              <Text style={[{ fontSize: 20 }, { color }]}>{item.num}</Text>
-              <Text style={[{ fontSize: 15 }, { color }]}>{item.day}</Text>
+              <Text style={[{ fontSize: 18 }, { color }]}>{item.num}</Text>
+              <Text style={[{ fontSize: 13 }, { color }]}>{item.day}</Text>
             </View>
           );
         }}
@@ -265,7 +265,7 @@ const ExpertProfileReducer2 = ({ navigation }) => {
         <Text
           style={{
             color: COLORS.gray,
-            fontSize: 17,
+            fontSize: 15,
           }}
         >
           Heures de Visites

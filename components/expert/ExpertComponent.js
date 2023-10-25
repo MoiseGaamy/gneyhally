@@ -4,10 +4,21 @@ import BtnBack from "../btn/BtnBack";
 import BtnAvailably from "../btn/BtnAvailably";
 import { COLORS } from "../../utils/Constantes";
 import { DataExpertCom } from "../../Data";
+import { useFonts } from "expo-font";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 const ExpertComponent = ({ texte, moreText, navigation }) => {
+  const [loaded] = useFonts({
+    lexendGiga: require("../../assets/fonts/lexendGiga/LexendGiga-SemiBold.ttf"),
+    rubik: require("../../assets/fonts/rubik/Rubik-Regular.ttf"),
+    rubik5: require("../../assets/fonts/rubik/Rubik-Light.ttf"),
+    rubik7: require("../../assets/fonts/rubik/Rubik-Bold.ttf"),
+  });
   const onPress = () => navigation.navigate("expertProfileReducer2");
+
+  if (!loaded) {
+    return null;
+  }
   return (
     <View
       style={{
@@ -142,6 +153,7 @@ const ExpertComponent = ({ texte, moreText, navigation }) => {
             color: COLORS.gray,
             fontSize: 14,
             fontWeight: 400,
+            fontFamily: "rubik",
           }}
         >
           {texte}
@@ -239,8 +251,8 @@ const ExpertComponent = ({ texte, moreText, navigation }) => {
                 { color },
               ]}
             >
-              <Text style={[{ fontSize: 20 }, { color }]}>{item.num}</Text>
-              <Text style={[{ fontSize: 15 }, { color }]}>{item.day}</Text>
+              <Text style={[{ fontSize: 18 }, { color }]}>{item.num}</Text>
+              <Text style={[{ fontSize: 13 }, { color }]}>{item.day}</Text>
             </View>
           );
         }}
@@ -255,7 +267,7 @@ const ExpertComponent = ({ texte, moreText, navigation }) => {
         <Text
           style={{
             color: COLORS.gray,
-            fontSize: 17,
+            fontSize: 14,
           }}
         >
           Heures de Visites

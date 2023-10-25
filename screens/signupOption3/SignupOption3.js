@@ -17,11 +17,11 @@ import OTPTextView from "react-native-otp-textinput";
 
 const SignupOption3 = ({ navigation }) => {
   const onPress = () => navigation.navigate("SignupOption4");
-  const [email, onChangeEmail] = React.useState("Adresse email");
-  const [mdp, onChangeMdp] = React.useState("Mot de passe");
-  const [rmdp, onChangeRmdp] = React.useState("Répété le mot de passe");
-  const [number, onChangeNumber] = React.useState("");
-  const [otpInput, setOtpInput] = React.useState("");
+  const [email, onChangeEmail] = useState("Adresse email");
+  const [mdp, onChangeMdp] = useState("Mot de passe");
+  const [rmdp, onChangeRmdp] = useState("Répété le mot de passe");
+  const [number, onChangeNumber] = useState("");
+  const [otpInput, setOtpInput] = useState("");
   const input = useRef(null);
 
   const windowWith = useWindowDimensions().height;
@@ -75,7 +75,7 @@ const SignupOption3 = ({ navigation }) => {
         alignItems: "center",
       }}
     >
-      <View style={{ flex: 1,}}>
+      <View style={{ flex: 1 }}>
         <View style={styles.topImageContainer}>
           <Image
             source={require("../../assets/images/Layer__.png")}

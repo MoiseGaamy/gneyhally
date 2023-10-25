@@ -138,21 +138,6 @@ const ActionAuthentication = ({ navigation }) => {
           </View>
         </View>
       </View>
-      <View
-        style={{
-          backgroundColor: "#2cbcf5",
-          width: "7%",
-          height: "3%",
-          borderRadius: 25,
-          position: "absolute",
-          top: 320,
-          left: 80,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Text style={{ color: "white" }}>L</Text>
-      </View>
       <View style={{ flex: 0.2 }}>
         <View
           style={{

@@ -15,7 +15,7 @@ const cardData = [
     id: "1",
     title: "Card 1",
     description: "Pourquoi les filles tombent enceinte ?",
-    icon: "music", // You can change the icon name based on your needs
+    icon: "article", // You can change the icon name based on your needs
     image: require("../../../assets/images/thirdCard.png"), // Replace with your image path
     backgroundColor: "#D1EBE1",
   },
@@ -23,7 +23,7 @@ const cardData = [
     id: "2",
     title: "Card 2",
     description: "D’où vient le sperme ?",
-    icon: "video-camera", // You can change the icon name based on your needs
+    icon: "article", // You can change the icon name based on your needs
     image: require("../../../assets/images/fithCard.png"), // Replace with your image path
     backgroundColor: "#FFBE88",
   },
@@ -31,7 +31,7 @@ const cardData = [
     id: "3",
     title: "Card 3",
     description: "Pourquoi les filles tombent enceinte ?",
-    icon: "image", // You can change the icon name based on your needs
+    icon: "article", // You can change the icon name based on your needs
     image: require("../../../assets/images/thirdCard.png"), // Replace with your image path
     backgroundColor: "#E7B7C8",
   },
@@ -39,7 +39,7 @@ const cardData = [
     id: "4",
     title: "Card 4",
     description: "D’où vient le sperme ?.",
-    icon: "file", // You can change the icon name based on your needs
+    icon: "article", // You can change the icon name based on your needs
     image: require("../../../assets/images/fithCard.png"), // Replace with your image path
     backgroundColor: "#FFBE88",
   },
@@ -55,8 +55,13 @@ function CardItem({ item, navigation }) {
     >
       <Image source={item.image} style={styles.cardImage} />
       <View style={styles.iconOverlay}>
-        {item.icon === "music" && (
-          <FontAwesome name="music" size={15} color="white" />
+        {item.icon === "article" && (
+          <View style={{ flexDirection: "row" }}>
+            <MaterialIcons name="article" size={15} color="white" />
+            <Text style={{ color: "white", fontSize: 9, marginLeft: 4 }}>
+              Article
+            </Text>
+          </View>
         )}
         {item.icon === "video-camera" && (
           <FontAwesome name="video-camera" size={15} color="white" />
@@ -117,8 +122,8 @@ const styles = StyleSheet.create({
     top: 5,
     right: 5,
     backgroundColor: "rgba(0, 0, 0, 0.3)",
-    borderRadius: 12,
-    padding: 4,
+    borderRadius: 8,
+    padding: 2,
     flexDirection: "row",
   },
   cardTitle: {
